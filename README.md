@@ -24,8 +24,24 @@ func main {
 
 #### Get variable
 
+##### String
 ~~~~
-configuration.Get("MY_VARIABLE_FROM_SOMEWHERE")
+configuration.GetString("MY_VARIABLE_FROM_SOMEWHERE")
+~~~~
+
+##### Integer
+~~~~
+configuration.GetInt("MY_VARIABLE_FROM_SOMEWHERE")
+~~~~
+
+##### Float 32
+~~~~
+configuration.GetFloat32("MY_VARIABLE_FROM_SOMEWHERE")
+~~~~
+
+##### Float 64
+~~~~
+configuration.GetFloat64("MY_VARIABLE_FROM_SOMEWHERE")
 ~~~~
 
 ### Setup variables
@@ -38,13 +54,22 @@ Just set you variable like you usually do with your favorite OS.
 
 ~~~~
 # You can put comments in you .ini file
-myBeautiful_variable.so-nice=Something very beautiful
-anotherVariableWithSpaces=      Look, some spaces before the string !
+# You can define string variables (surrounded by double quotes)
+stringVariable = "This is a "string" variable"
+
+# You can define empty string variables too
+emptyStringVariable = ""
+
+# You also can define integer variables
+intVariable = 42
+
+# Or float variables
+floatVariable = 3.14
 ~~~~
 
 #### Command line
 
 ~~~~
-myWonderfulGoProgram myCuteVariable=kitten myCuteOtherVariable=puppy
+myWonderfulGoProgram myCuteVariable=5 myCuteOtherVariable=42
 ~~~~
 
